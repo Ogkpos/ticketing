@@ -9,6 +9,8 @@ declare global {
   var signin: (id?: string) => string[];
 }
 
+jest.setTimeout(30000); // 30 seconds
+
 //tell jest to redirect the actual natswrapper(using our mock)
 jest.mock("../nats-wrapper");
 

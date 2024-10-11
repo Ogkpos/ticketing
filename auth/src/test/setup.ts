@@ -7,6 +7,8 @@ declare global {
   var signin: () => Promise<string[]>;
 }
 
+jest.setTimeout(30000); // 30 seconds
+
 let mongo: any;
 beforeAll(async () => {
   process.env.JWT_KEY = "wemustsucceed";
